@@ -1,5 +1,7 @@
 ## MetDense format specification
 
+Version 0.1
+
 ### Overview
 
 A MetDense contains five blocks, as follows:
@@ -17,9 +19,9 @@ The data from the Positions and Data Blocks can be read on demand from disk.
 
 - Bytes 0-7: The string "MetDense"
 - Bytes 8-11: The major version number of the format spec as uint32 (for now: 0)
-- Bytes 12-15: The minor version number as uint32 (for now: 0)
-- Bytes 16-23: The offset (position in the file) of the Data block (bytes: 16-19 for version 0.0)
-- Bytes 24-31: The offset (position in the file) of the Chromosomes block (bytes 20-23 for version 0.0)
+- Bytes 12-15: The minor version number as uint32 (for now: 1)
+- Bytes 16-23: The offset (position in the file) of the Data block as uint64 (was uint32, bytes 16-19 in version 0.0)
+- Bytes 24-31: The offset (position in the file) of the Chromosomes block as uint64 (was uint32, bytes 20-23 in version 0.0)
 
 ### Cells Block
 
